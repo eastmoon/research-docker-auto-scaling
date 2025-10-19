@@ -1,0 +1,1 @@
+server worker1 weight=3;

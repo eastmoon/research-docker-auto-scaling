@@ -1,0 +1,16 @@
+Step1:
+  module: autoscaling
+  container:
+    name: autoworker
+  deploy:
+    scale: up
+    replicas:
+      max: 3
+      min: 1
+Step2:
+  module: autoscaling
+  container:
+    name: loadbalancer
+  command:
+  - cmd: restart
+    msg: Restart service.
